@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.5" project-jdk-type="Python SDK" />
+=======
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.6.1 (C:\ProgramData\Anaconda3\python.exe)" project-jdk-type="Python SDK" />
+>>>>>>> 9a29f00f3d139ef760f2ac565a088de5038dbff8
 </project>
