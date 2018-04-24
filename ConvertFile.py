@@ -1,9 +1,12 @@
 import os
 import zipfile
+import shutil
 
 
 def convertExtension(filename, nextExtension):
     nameList = os.path.splitext(filename)
+    if nextExtension == '.zip':
+        shutil.copy(filename, nameList[0] + "_원본" + nameList[1])
     os.rename(filename, nameList[0] + nextExtension)
     return nameList[0] + nextExtension
 
@@ -16,6 +19,16 @@ def extractZip(filename):
     pptzip.close()
 
 
+def zipzip(dirname):
+    ppt = zipfile.ZipFile(os.getcwd() + "\\" + dirname + ".zip", "w")
+
+    for folder, subfolders, files in os.walk(os.getcwd() + "\\" + dirname):
+        for file in files:
+            ppt.write(os.path.join(folder, file), os.path.relpath(os.path.join(folder, file), os.getcwd() + "\\" +
+                                                                  dirname), compress_type=zipfile.ZIP_DEFLATED)
+    ppt.close()
+
+
 def ppt2zip(filename):
     try:
         filename = convertExtension(filename, ".zip")
@@ -26,9 +39,20 @@ def ppt2zip(filename):
         print(e)
 
 
+def dir2ppt(dirname):
+    try:
+        zipzip(dirname)
+        convertExtension(dirname + ".zip", ".pptx")
+    except FileExistsError as e:
+        print(dirname + ".pptx", "is already exists")
+    except Exception as e:
+        print(e)
+
+
 def main():
     fname = input("file name: ")
-    ppt2zip(fname)
+    # ppt2zip(fname)
+    dir2ppt(fname)
 
 
 if __name__ == "__main__":
