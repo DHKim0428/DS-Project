@@ -29,6 +29,8 @@ def zipzip(dirname):
     ppt.close()
 
 
+"""This method convert pptx file to zip file and extract it.
+    filename string should contain Extention (Ex. test.pptx)"""
 def ppt2zip(filename):
     try:
         filename = convertExtension(filename, ".zip")
@@ -39,6 +41,8 @@ def ppt2zip(filename):
         print(e)
 
 
+"""This method convert xml directory to pptx file.
+    dirname string must not contain Extention (Ex. test)"""
 def dir2ppt(dirname):
     try:
         zipzip(dirname)
