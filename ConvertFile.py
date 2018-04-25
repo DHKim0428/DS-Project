@@ -55,8 +55,8 @@ def dir2ppt(dirname):
 
 def main():
     fname = input("file name: ")
-    # ppt2zip(fname)
-    dir2ppt(fname)
+    ppt2zip(fname)
+    #dir2ppt(fname)
 
 
 if __name__ == "__main__":
