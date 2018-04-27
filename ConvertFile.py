@@ -54,9 +54,12 @@ def dir2ppt(dirname):
 
 
 def main():
+    mode = int(input("mode(1, 2): "))
     fname = input("file name: ")
-    ppt2zip(fname)
-    #dir2ppt(fname)
+    if mode == 1:
+        ppt2zip(fname)
+    else:
+        dir2ppt(fname)
 
 
 if __name__ == "__main__":
