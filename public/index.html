@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#263238">
+
+  <style>
+    .grad1{
+      background: linear-gradient(to bottom, #08112a, #1a415c, #41596a) ;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-attachment: fixed;
+    }
+
+    .collection-item{
+      height: 100px;
+      border-style: none !important;
+      background-color: #263238 !important;
+      padding: 0px 0px !important;
+    }
+    .login{
+      height: 100%;
+    }
+    #dvMsgForm{
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    .meta-bar.chat{
+      border-top: 1px solid lightgray;
+      background: white;
+      padding-right: 5px;
+      padding-left: 0;
+      border-bottom: none;
+      flex: 1 0 29px;
+      display: flex;
+      flex-direction: row;
+    }
+    #dvMsgForm #dvInputChat{
+      margin-bottom: 0;
+      cursor: text;
+      width: 85%;
+      outline: none;
+      height: 45px;
+      padding-top: 10px;
+    }
+    #iBtnAttach{
+      padding-right: 10px;
+    }
+    .meta-bar.chat > i{
+      padding-top: 7px;
+      margin-left: -10px;
+      flex: 1 0 22px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+
+
+
+
+  </script>
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>KSA Combined</title>
+  <link rel="stylesheet" href="../../../../../../Users/DHKim/Documents/Firebase_test/FB_chat/public/css/custom.css">
+</head>
+
+<body class="blue-grey darken-4">
+
+
+
+
+
+
+<!-------------------------------------------------------nav-bar------------------------------------------------------->
+<div class="navbar-fixed">
+  <nav class="blue-grey darken-4">
+    <div class="nav-wrapper" >
+      <a href="#!" class="brand-logo">Combined</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html">Home</a></li>
+        <li><a href="badges.html">How to Use</a></li>
+        <li><a href="collapsible.html">About us</a></li>
+        <li><a href="#" id="logoutBtn1" style="display: none;">Log Out</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<ul class="sidenav" id="mobile-demo">
+  <li><a href="sass.html">Home</a></li>
+  <li><a href="badges.html">How to Use</a></li>
+  <li><a href="collapsible.html">About us</a></li>
+  <li><a href="#" id="logoutBtn2" style="display: none;">Log Out</a></li>
+</ul>
+
+<!-----------------------------------------------------login-page------------------------------------------------------>
+<div style="display:block;" id="page_login">
+  <div class="row">
+    <div class="col s12 m12 l12 white-text center" style="font-size: 30px; margin-top:20vh; margin-bottom: 10px;">
+      Login
+    </div>
+    <div class="col s8 offset-s2 m8 offset-m2 l8 offset-l2" style="border-style: solid; border-color: white; border-radius: 10px; border-width: 1px; padding-top: 5px; padding-bottom: 5px">
+      <div class="input-field col s12 m12 l12">
+        <input id="email_login" type="text" class="validate white-text">
+        <label for="email_login">Email</label>
+      </div>
+      <div class="input-field col s12 m12 l12">
+        <input id="password_login" type="password" class="validate white-text">
+        <label for="password_login">Password</label>
+      </div>
+    </div>
+    <div class="col s12 m12 l12 center">
+      <button class="btn waves-effect waves-light" id="loginBtn" type="login" name="action" style="margin-top: 10px; margin-bottom: 10px;">login
+      </button>
+    </div>
+    <div class="col s12 m12 l12 center">
+      <a href="#" onclick="showSignUP()" style="font-size: 15px; color:white;">Sign Up</a>
+    </div>
+  </div>
+
+</div>
+
+<!-----------------------------------------------------Sign up-page------------------------------------------------------>
+<div style="display:none;" id="page_signup">
+  <div class="container">
+    <div class="center" style="margin-top:10px; margin-bottom: 10px; font-size: 25px; color:white;">Sign Up</div>
+
+    <div class="row">
+      <div class="col s12 m8 offset-m2 l8 offset-l2 white" style="border-radius: 5px; margin-bottom: 5px;">
+
+        <div class="center" style="font-size: 20px; color:#263238;">학번</div>
+        <div class="grey lighten-3" style="border-radius: 5px; margin-top: 0px; margin-bottom: 0px;">
+          <input type="text" id="sign_up_student_id">
+        </div>
+        <div class="center" style="font-size: 20px; color:#263238;">전화번호</div>
+        <div class="grey lighten-3" style="border-radius: 5px; margin-top: 0px; margin-bottom: 0px;">
+          <input type="tel" id="sign_up_phone">
+        </div>
+        <div class="center" style="font-size: 20px; color:#263238;">이메일</div>
+        <div class="grey lighten-3" style="border-radius: 5px; margin-top: 0px; margin-bottom: 0px;">
+          <input type="email" id="sign_up_email">
+        </div>
+        <div class="center" style="font-size: 20px; color:#263238;">비밀번호</div>
+        <div class="grey lighten-3" style="border-radius: 5px; margin-top: 0px; margin-bottom: 0px;">
+          <input type="password" id="sign_up_password">
+        </div>
+        <div class="center" style="font-size: 20px; color:#263238;">비밀번호 확인</div>
+        <div class="grey lighten-3" style="border-radius: 5px; margin-top: 0px; margin-bottom: 0px;">
+          <input type="password" id="sign_up_password_check">
+        </div>
+      </div>
+    </div>
+    <div class="center" style="margin-top: 5px;">
+      <button class="btn waves-effect waves-light" id="submit2" type="submit" name="action">등록
+        <i class="material-icons right">send</i>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<!-------------------------------------------------------웹페이지----------------------------------------------------->
+<div style="display:none;" id="page_iframe">
+  <iframe id="iframe_content" frameborder="0" style="width:100%; height:90vh;"></iframe>
+</div>
+
+
+<!-----------------------------------------------app-selection-page--------------------------------------------------->
+<div style="display:none;" id="page_app_select">
+  <div class="collection " style="border-style:none;">
+    <a href="#!" class="collection-item waves-effect waves-black" id="jenaBtn">
+      <div class="row valign-wrapper" style="height: 100px">
+        <div class="col s2 m2 l2">
+          <img src="images/크사이다.png" alt="크사이다" class="circle" style="height:70px">
+        </div>
+        <div class="col s9 m9 l9 center white-text" style="font-size:20px">크사이다</div>
+      </div>
+    </a>
+
+    <a href="#!" class="collection-item waves-effect waves-black">
+      <div class="row valign-wrapper" style="height: 100px">
+        <div class="col s2 m2 l2">
+          <img src="images/gaonnuri.jpg" alt="KSA EATS YOU" class="circle" style="height:70px">
+        </div>
+        <div class="col s9 m9 l9 center white-text" style="font-size:20px">가온누리 알림</div>
+      </div>
+    </a>
+
+    <a href="#!" class="collection-item waves-effect waves-black" id="mentoringBtn">
+      <div class="row valign-wrapper" style="height: 100px">
+        <div class="col s2 m2 l2">
+          <img src="images/mentoring.jpg" alt="Mentoring" class="circle" style="height:70px">
+        </div>
+        <div class="col s9 m9 l9 center white-text" style="font-size:20px">멘토링 수고링</div>
+      </div>
+    </a>
+
+    <a href="#!" class="collection-item waves-effect waves-black" id="AFGOBtn">
+      <div class="row valign-wrapper" style="height: 100px">
+        <div class="col s2 m2 l2">
+          <img src="images/외출신청.png" alt="외출 신청" class="circle" style="height:70px">
+        </div>
+        <div class="col s9 m9 l9 center white-text" style="font-size:20px">외출 신청</div>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+
+<!-------------------------------------------------------chat-page----------------------------------------------------->
+
+<div style="display: none;" id="page_chat">
+  <div class="container" style="padding-bottom: 50px; overflow: scroll; height: 90vh;" id="messageContainer">
+    <ul id="ulMessageList">
+
+    </ul>
+  </div>
+
+  <div class="row grey lighten-4" style="position:fixed; bottom: 0px; width: 100%; margin-bottom: 0px;">
+    <div class="input-field col s10 m10 l10" style="margin-bottom: 5px; margin-top: 0px;">
+      <textarea id="chatinput" class="materialize-textarea" style="max-height:150px;  color: #202020; margin-bottom: 0px;"></textarea>
+    </div>
+    <div class="col s2 m2 l2 center">
+      <div id="messageBtn" class="btn center cyan darken-1" style="margin-top: 10px; padding-right:0px; padding-left: 0px; width:100%; max-width: 80px;">
+        <i class="material-icons">send</i>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-------------------------------------------------------외출신청----------------------------------------------------->
+
+<div style="display:none;" id="page_AFGO">
+  <div class="container">
+
+    <div class="center" style="margin-top:10px; margin-bottom: 10px; font-size: 25px; color:white;">외출 신청</div>
+
+    <div class="row">
+      <div class="col s12 white" style="border-radius: 5px; margin-bottom: 5px;">
+
+        <div class="row">
+          <div class="col s4">
+            <div class="grey lighten-3 valign-wrapper" style="border-radius: 5px; margin-top: 5px; margin-bottom: 5px; min-height: 40px;">
+              <div class="center" style="width: 100%">
+                <label>
+                  <input name="group1" type="radio" id="gubun1" checked>
+                  <span style="color:#263238;">외출</span>
+                </label>
+                <label>
+                  <input name="group1" type="radio" id="gubun2">
+                  <span style="color:#263238;">외박</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="col s4">
+            <div class="grey lighten-3 valign-wrapper" style="border-radius: 5px; margin-top: 5px; margin-bottom: 5px; min-height: 40px;">
+              <div class="center" style="width: 100%">
+                <label>
+                  <input name="group2" type="radio" id="person" checked>
+                  <span style="color:#263238;">개인</span>
+                </label>
+                <label>
+                  <input name="group2" type="radio" id="group"/>
+                  <span style="color:#263238;">단체</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="col s4">
+            <div class="grey lighten-3 valign-wrapper" style="border-radius: 5px; margin-top: 5px; margin-bottom: 5px; height: 40px;">
+              <div class="center" style="width: 100%">
+                <label>
+                  <input type="checkbox" id="rne"/>
+                  <span style="color:#263238;">R&E</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grey lighten-3" id="chips" style="display:none; border-radius: 5px; margin-top: 5px; margin-bottom: 5px;">
+          <div class="chips chips-placeholder" id="chips2"></div>
+        </div>
+
+
+        <div class="center" style="font-size: 20px; color:#263238;">외출 시간</div>
+        <div class="row" style="margin-top: 0px; margin-bottom: 0px;">
+          <div class="col s6">
+            <div class="grey lighten-3" style="border-radius: 5px; margin-top: 0px; margin-bottom: 0px;">
+              <input type="date" id="start_date">
+            </div>
+          </div>
+          <div class="col s6">
+            <div class="grey lighten-3" style="border-radius: 5px; margin-top: 0px; margin-bottom: 0px;">
+              <input type="time" id="start_time">
+            </div>
+          </div>
+        </div>
+        <div class="center" style="font-size: 20px; color:#263238;">귀교 시간</div>
+        <div class="row" style="margin-top: 0px; margin-bottom: 0px;">
+          <div class="col s6">
+            <div class="grey lighten-3" style="border-radius: 5px; margin-top: 5px; margin-bottom: 5px;">
+              <input type="date" id="end_date" disabled>
+            </div>
+          </div>
+          <div class="col s6">
+            <div class="grey lighten-3" style="border-radius: 5px; margin-top: 5px; margin-bottom: 5px;">
+              <input type="time" id="end_time"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="center" style="font-size: 20px; color:#263238;">외출 장소</div>
+        <div class="grey lighten-3" style="border-radius: 5px; margin-top: 0px; margin-bottom: 0px;">
+          <input type="text" id="place">
+        </div>
+        <div class="center" style="font-size: 20px; color:#263238;">외출 사유</div>
+        <div class="grey lighten-3" style="border-radius: 5px; margin-top: 0px; margin-bottom: 0px;">
+          <input type="text" id="reason">
+        </div>
+        <div class="center" style="font-size: 20px; color:#263238;">학사사이트 비밀번호</div>
+        <div class="grey lighten-3" style="border-radius: 5px; margin-top: 0px; margin-bottom: 0px;">
+          <input type="password" id="password2">
+        </div>
+      </div>
+    </div>
+    <div class="center" style="margin-top: 5px;">
+      <button class="btn waves-effect waves-light" id="submit" type="submit" name="action">나가자! 자유의 세계로!
+        <i class="material-icons right">send</i>
+      </button>
+    </div>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</div>
+
+
+<!-----------------------------------------------------메시지 템플릿-------------------------------------------------->
+
+<script type="text/template" id="chat_me">
+  <li id="chat_<%=chatNumber %>">
+    <div class="row" style="margin-top: 0px; margin-bottom:0px;">
+      <div class="col s12">
+        <div class="card cyan darken-2 white-text" style="margin-top:10px; margin-bottom:0px; ">
+          <div class="card-content" style="padding-top: 10px; padding-bottom: 10px;">
+            <p><%=message %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</script>
+
+<script type="text/template" id="chat_bot_text">
+  <li id="chat_<%=chatNumber_bot_text %>">
+    <div class="row" style="margin-top: 0px; margin-bottom: 0px;">
+      <div class="col s12">
+        <div class="card white" style="margin-top:2px; margin-bottom:0px;">
+          <div class="card-content" style="padding-top: 10px; padding-bottom: 10px;">
+            <p><%=message %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</script>
+
+<script type="text/template" id="chat_bot_img">
+  <li id="chat_<%=chatNumber_bot_img %>">
+    <div class="row" style="margin-top: 0px; margin-bottom: 0px;">
+      <div class="col s12">
+        <div class="card white" style="margin-top:2px; margin-bottom:0px;">
+          <div class="card-image">
+            <img src="<%=imgsrc %>">
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</script>
+
+
+
+<!--JavaScript at end of body for optimized loading-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<script type="text/javascript" src="js/underscore-min.js"></script>
+<!-- Firebase App is always required and must be first -->
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+
+<!-- Add additional services you want to use -->
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-functions.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAvuqnr2eJ00fJqpG-WR3riB609hY7rmBk",
+        authDomain: "ksacombined.firebaseapp.com",
+        databaseURL: "https://ksacombined.firebaseio.com",
+        projectId: "ksacombined",
+        storageBucket: "ksacombined.appspot.com",
+        messagingSenderId: "297521263701"
+    };
+    firebase.initializeApp(config);
+
+    function FirebaseChat(){
+        this.init();
+        this.initEvent();
+    }
+
+    FirebaseChat.prototype.init = function(){
+        this.auth = firebase.auth();
+        this.emailJoinSubmit = document.getElementById('submit2');
+        this.emailBtn = document.getElementById('loginBtn');
+        this.loginPage = document.getElementById('page_login');
+        this.signupPage = document.getElementById('page_signup');
+        this.appSelectPage = document.getElementById('page_app_select');
+        this.logoutBtn1 = document.getElementById('logoutBtn1');
+        this.logoutBtn2 = document.getElementById('logoutBtn2');
+        this.AFGOBtn = document.getElementById('AFGOBtn');
+        this.AFGOPage = document.getElementById('page_AFGO');
+        this.slideNav = document.getElementById('mobile-demo');
+        this.jenaBtn = document.getElementById('jenaBtn');
+        this.chatPage = document.getElementById('page_chat');
+        this.messageBtn = document.getElementById('messageBtn');
+        this.mentoringBtn = document.getElementById('mentoringBtn');
+        this.iframePage = document.getElementById('page_iframe');
+        this.iframeContent = document.getElementById('iframe_content');
+        this.ulMessageList = document.getElementById('ulMessageList');
+        this.Chatcontainer = document.getElementById('messageContainer');
+        this.chatInput = document.getElementById('chatinput');
+        this.INDEXDB_DB_NAME = "USER";
+        this.INDEXDB_VERSION = 1;
+        this.INDEXDB_STORE = "Users";
+        this.chatNum = 0;
+        this.setCloudMessaging();
+    };
+
+    FirebaseChat.prototype.initEvent = function(){
+        this.auth.onAuthStateChanged(this.onAuthChange.bind(this));
+        this.emailJoinSubmit.addEventListener('click', this.createEmailUser.bind(this));
+        this.emailBtn.addEventListener('click', this.onEmailBtnClick.bind(this));
+        this.logoutBtn1.addEventListener('click', this.logOut.bind(this));
+        this.logoutBtn2.addEventListener('click', this.logOut.bind(this));
+        this.AFGOBtn.addEventListener('click', this.showAFGO.bind(this));
+        this.jenaBtn.addEventListener('click', this.showChat.bind(this));
+        this.mentoringBtn.addEventListener('click', this.showWeb.bind(this, 'https://mentoringtime-f96cc.firebaseapp.com/'));
+        this.messageBtn.addEventListener('click', this.sendChat.bind(this));
+        this.chatInput.addEventListener('keydown', this.onEnterKey.bind(this));
+    };
+
+    FirebaseChat.prototype.setCloudMessaging = function(){
+        let messaging = firebase.messaging();
+        messaging.requestPermission().then(function () {
+            console.log('메세징 권한 획득');
+            return messaging.getToken();
+        }).then(function(token){
+            console.log('fcm token : ', token);
+            fbChat.saveFCMToken();
+        }).catch(function(e){
+            console.log('메시지 권한 획득 중 에러', e);
+        })
+    };
+
+    FirebaseChat.prototype.saveFCMToken = function(){
+        let cbGetToken = function(token){
+            console.log('setLogin fcmId get : ', token);
+            let userUid = this.auth.currentUser.uid;
+            let fcmIdRef = this.database.ref('FcmId/' + userUid);
+            fcmIdRef.set(token);
+        };
+        firebase.messaging().getToken().then(cbGetToken.bind(this)).catch(function(e){
+            console.log('fcmId 확인 중 에러 : ', e)
+        })
+    }
+
+    FirebaseChat.prototype.onEnterKey = function(e){
+        if(e.keyCode === 13){
+            e.preventDefault();
+            this.sendChat();
+        }
+    };
+
+    FirebaseChat.prototype.showWeb = function(link){
+        this.appSelectPage.style.display = 'none';
+        this.iframePage.style.display = 'block';
+        this.iframeContent.src = link;
+    };
+
+    FirebaseChat.prototype.showChat = function(){
+        this.appSelectPage.style.display = 'none';
+        this.chatPage.style.display = 'block';
+        this.ulMessageList.innerHTML = '';
+    };
+
+    FirebaseChat.prototype.sendChat = function(){
+        let msg = document.getElementById('chatinput').value.trim();
+        document.getElementById('chatinput').value = '';
+        if(msg.length > 0){
+            let messageTemplate = document.getElementById('chat_me').innerHTML;
+            let messageTemplateBot = document.getElementById('chat_bot_text').innerHTML;
+            let messageTemplateBotPicture = document.getElementById('chat_bot_img').innerHTML;
+            let messageHtml = '';
+            messageHtml = _.template(messageTemplate)({
+                chatNumber: this.chatNum,
+                message: msg
+            });
+            this.chatNum += 1;
+            this.ulMessageList.innerHTML = this.ulMessageList.innerHTML + messageHtml;
+            this.Chatcontainer.scrollTop = this.Chatcontainer.scrollHeight;
+
+            let xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState === 4 && this.status === 200) {
+                    if(JSON.parse(this.responseText).message.photo){
+                        messageHtml = '';
+                        messageHtml = _.template(messageTemplateBotPicture)({
+                            chatNumber_bot_img: fbChat.chatNum,
+                            imgsrc: JSON.parse(this.responseText).message.photo.url
+                        });
+                        fbChat.chatNum += 1;
+                        fbChat.ulMessageList.innerHTML = fbChat.ulMessageList.innerHTML + messageHtml;
+                        fbChat.Chatcontainer.scrollTop = fbChat.Chatcontainer.scrollHeight;
+                    }else{
+                        messageHtml = '';
+                        messageHtml = _.template(messageTemplateBot)({
+                            chatNumber_bot_text: fbChat.chatNum,
+                            message: JSON.parse(this.responseText).message.text
+                        });
+                        fbChat.chatNum += 1;
+                        fbChat.ulMessageList.innerHTML = fbChat.ulMessageList.innerHTML + messageHtml;
+                        fbChat.Chatcontainer.scrollTop = fbChat.Chatcontainer.scrollHeight;
+                    }
+                }
+            };
+            xhttp.open("POST", "https://ksacombined.cf/jena", true);
+            xhttp.setRequestHeader("Content-type", "application/json; charset=utf-8");
+            let data = {
+                "user_key": "ksacombined",
+                "type": "text",
+                "content": msg
+            };
+            xhttp.send(JSON.stringify(data));
+        }
+    }
+
+    FirebaseChat.prototype.saveUserAtIndexedDB = function(user, userName, phone, isSave){
+        if(indexedDB){
+            var request = indexedDB.open(this.INDEXDB_DB_NAME , this.INDEXDB_VERSION); // 데이터베이스 접근 요청
+            var objectName = this.INDEXDB_STORE
+            request.onupgradeneeded = function(){  // 데이터 베이스 생성 또는 버전 업그레이드 시 수행
+                var db = request.result; //데이터 베이스 객체
+                var store  = db.createObjectStore(objectName, {keyPath :"uid"}); // 테이블에 해당하는 Object 생성 및 키값 설정
+            }
+            request.onsuccess = function() {  // 데이터베이스 접근 요청이 성공 시
+                var db = request.result;
+                var tx = db.transaction(objectName, "readwrite"); //읽기쓰기 권한으로 트랜잭션을 얻음
+                var store = tx.objectStore(objectName);
+
+                store.get(user.uid).onsuccess = function(event){  //user.uid 기준으로 IndexedDB 데이터를 읽어온다
+                    var data = event.target.result;
+                    console.log('IndexedDB query 결과 : ', data);
+                    console.log('saveUserAtIndexedDB isSave 파라미터', isSave);
+                    if(!data){  //데이터가 없으면 저장
+                        store.put({
+                            uid: user.uid
+                            , email: user.email
+                            , phoneNum: phone
+                            , displayName : userName ? userName : user.displayName
+                            , isSave : false
+                        });
+                    }
+
+                    if(data && isSave){  // 데이터가 존재하고 isSave 파라미터 true이면 데이터를 업데이트
+                        store.put({
+                            uid: user.uid
+                            , email: user.email
+                            , phoneNum: phone
+                            , displayName : userName ? userName : user.displayName
+                            , isSave : true
+                        });
+                    }
+                }
+                tx.oncomplete = function() {
+                    console.log('IndexedDB 트랜잭션 완료')
+                    db.close();
+                };
+            }
+        }
+    }
+    FirebaseChat.prototype.showAFGO = function(){
+        this.AFGOPage.style.display = 'block';
+        this.appSelectPage.style.display = 'none';
+    };
+
+    FirebaseChat.prototype.logOut = function(){
+        if(confirm('로그아웃 하시겠습니까?')){
+            if(this.database){
+                this.database.goOffline();
+            }
+            this.auth.signOut();
+            this.logoutBtn1.style.display = 'none';
+            this.logoutBtn2.style.display = 'none';
+            var instance = M.Sidenav.getInstance(this.slideNav);
+            instance.close();
+        }
+    };
+
+    FirebaseChat.prototype.onEmailBtnClick = function(){
+        var email = document.getElementById('email_login').value.trim();
+        var password = document.getElementById('password_login').value.trim();
+        if(FirebaseChat.emailCheck(email) && password.length > 0){
+            var cbSignInEmail = function(){
+                return this.auth.signInWithEmailAndPassword(email, password).then(function(){
+                    console.log('이메일 로그인 성공');
+                    document.getElementById('email_login').value = '';
+                    document.getElementById('password_login').value = '';
+                }).catch(function(error){
+                    console.log('이메일 로그인 과정 에러');
+                    switch (error.code){
+                        case "auth/invalid-email":
+                            alert('유효하지 않은 메일입니다');
+                            break;
+                        case "auth/user-disabled":
+                            alert('사용이 정지된 유저 입니다.');
+                            break;
+                        case "auth/user-not-found":
+                            alert('사용자를 찾을 수 없습니다.');
+                            break;
+                        case "auth/wrong-password":
+                            alert("잘못된 패스워드 입니다.");
+                            break;
+                    }
+                    document.getElementById('email_login').value = '';
+                    document.getElementById('password_login').value = '';
+                })
+            }
+            this.auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL).then(cbSignInEmail.bind(this));
+        }
+    }
+
+    /**
+     * 인증 정보가 변화되었을 시
+     * @param user
+     */
+    FirebaseChat.prototype.onAuthChange = function(user){
+        if (user) {
+            console.log('user로그인 : ',JSON.stringify(user));
+            this.setLogin(user);
+        } else {
+            console.log('로그아웃');
+            this.setLogOut();
+        }
+    };
+
+    FirebaseChat.prototype.setLogin = function(user){
+        this.database = firebase.database();
+        this.database.goOnline();
+        this.loginPage.style.display = 'none';
+        this.signupPage.style.display = 'none';
+        this.appSelectPage.style.display = 'block';
+        this.logoutBtn1.style.display = 'block';
+        this.logoutBtn2.style.display = 'block';
+        this.checkAndSaveUser(user);
+        this.viewGN();
+    };
+
+    FirebaseChat.prototype.viewGN = function(){
+        let paramData = FirebaseChat.getParam('gn');
+        if(paramData && paramData.length > 0){
+            this.appSelectPage.style.display = 'none';
+            this.chatPage.style.display = 'block';
+            this.ulMessageList.innerHTML = '';
+            this.database.ref('GN/').once('value', snapshot=>{
+                snapshot.forEach(childSnapShot =>{
+                    let title = childSnapShot.val().title;
+                    let url = childSnapShot.val().url;
+                    let messageHtml = '';
+                    let messageTemplateBot = document.getElementById('chat_bot_text').innerHTML;
+                    messageHtml = _.template(messageTemplateBot)({
+                        chatNumber_bot_text: fbChat.chatNum,
+                        message: "새 글이 올라왔어요!\n" + title + "\n" + url
+                    });
+                    fbChat.chatNum += 1;
+                    this.ulMessageList.innerHTML = this.ulMessageList.innerHTML + messageHtml;
+                    this.Chatcontainer.scrollTop = this.Chatcontainer.scrollHeight;
+                });
+            })
+        }
+    };
+
+    FirebaseChat.getParam = function (name){
+        var result = "";
+        var queryString = window.location.search;
+        var paramMap = {};
+        if (queryString == "")
+            result = undefined;
+        if (typeof result != "undefined"){
+            var params = queryString.split("?")[1];
+            if (params == "")
+                result = undefined;
+            if (typeof result != "undefined") {
+                var paramObj = params.split("&");
+                for (var i=0; i<paramObj.length; i++){
+                    var datas = paramObj[i].split("=");
+                    paramMap[datas[0]] = datas[1];
+                }
+                result = paramMap[name];
+            } }
+            return result;
+    };
+
+
+
+    FirebaseChat.prototype.checkAndSaveUser = function(user){
+        try{
+            var request = indexedDB.open(this.INDEXDB_DB_NAME, this.INDEXDB_VERSION);
+            var objectName = this.INDEXDB_STORE;
+            request.onsuccess = function(){
+                var db = request.result;
+                var tx = db.transaction(objectName, "readwrite");
+                var store = tx.objectStore(objectName);
+                store.get(user.uid).onsuccess = function(event){
+                    var data = event.target.result;
+                    console.log('IndexedDB query 결과 : ', data);
+                    console.log('checkAndSaveUser is Save', data.isSave);
+                    if(!data.isSave){
+                        fbChat.saveUserAtRealDB(data);
+                    }
+                }
+                tx.oncomplete = function(){
+                    console.log('IndexedDB 트랜잭션 완료');
+                    db.close();
+                }
+            }
+        }catch(e){
+            this.saveUserAtRealDB(user);
+        }
+    }
+
+    FirebaseChat.prototype.saveUserAtRealDB = function(user){
+        var userRef = this.database.ref('Users/' + user.uid);
+        var cbUserRefResult = function(dataSnapShot){
+            if(!dataSnapShot.hasChildren()){
+                console.log('saveUserAtRealDB 저장');
+                userRef.set({
+                    uid: user.uid,
+                    email: user.email,
+                    phoneNum: user.phoneNum,
+                    displayNum: user.displayName
+                }).then(cbUserAfterSave.bind(this));
+            }
+        }
+        var cbUserAfterSave = function(){
+            this.saveUserAtIndexedDB(user, null, true);
+        }
+        userRef.once('value').then(cbUserRefResult.bind(this));
+    }
+
+    FirebaseChat.prototype.setLogOut = function(){
+        this.loginPage.style.display = 'block';
+        this.signupPage.style.display = 'none';
+        this.appSelectPage.style.display = 'none';
+        this.AFGOPage.style.display = 'none';
+
+    };
+
+    FirebaseChat.prototype.createEmailUser = function(){
+        var stuNum = document.getElementById('sign_up_student_id').value.trim();
+        var phone = document.getElementById('sign_up_phone').value.trim();
+        console.log(phone);
+        var email = document.getElementById('sign_up_email').value.trim();
+        var password = document.getElementById('sign_up_password').value.trim();
+        var rePassword = document.getElementById('sign_up_password_check').value.trim();
+        var appSelect = document.getElementById('page_app_select');
+        var signupPage = document.getElementById('page_signup');
+        if(this.validateJoinForm(stuNum, phone, email, password, rePassword)) {
+            var cbCreateUserWithEmail = function (user) {
+                console.log('이메일 가입 성공 : ', JSON.stringify(user));
+                let user2 = firebase.auth().currentUser;
+                this.saveUserAtIndexedDB(user2, stuNum, phone, false);
+                user2.updateProfile({
+                    displayName: stuNum,
+                }).then(function() {
+                    console.log('userName 업데이트 성공')
+                }).catch(function(error) {
+                    console.error('userName 업데이트 실패 : ', error );
+                });
+                //인증 메일 발송
+                this.auth.useDeviceLanguage(); // 이메일 기기언어로 세팅
+                user2.sendEmailVerification().then(function() {
+                    console.log('인증메일 발송 성공')
+                }).catch(function(error) {
+                    console.error('인증메일 발송 에러', error);
+                });
+                alert('성공적으로 처리되었습니다.');
+                appSelect.style.display = 'block';
+                signupPage.style.display = 'none';
+            }
+
+            var clearinput = function(){
+                document.getElementById('sign_up_student_id').value = '';
+                document.getElementById('sign_up_phone').value = '';
+                document.getElementById('sign_up_email').value = '';
+                document.getElementById('sign_up_password').value = '';
+                document.getElementById('sign_up_password_check').value = '';
+            }
+
+            var cbAfterPersistence = function () {
+                return this.auth.createUserWithEmailAndPassword(email, password).then(cbCreateUserWithEmail.bind(this)).catch(function (error) {
+                    console.error('이메일 가입시 에러 : ', error);
+                    switch (error.code) {
+                        case "auth/email-already-in-use":
+                            alert('이미 사용중인 이메일 입니다.');
+                            break;
+                        case "auth/invalid-email":
+                            alert('유효하지 않은 메일입니다');
+                            break;
+                        case "auth/operation-not-allowed":
+                            alert('이메일 가입이 중지되었습니다.');
+                            break;
+                        case "auth/weak-password":
+                            alert("비밀번호를 6자리 이상 필요합니다");
+                            break;
+                    }
+                    clearinput();
+                })
+            }
+            this.auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL).then(cbAfterPersistence.bind(this)).catch(function (error) {
+                console.error('인증 상태 설정 중 에러 발생', error);
+            })
+        }
+    }
+
+    FirebaseChat.prototype.validateJoinForm = function(stuNum, phone, email, password, rePassword){
+        //이메일 유효성 체크
+        if(!FirebaseChat.emailCheck(email)){
+            alert("이메일 형식에 맞지 않습니다");
+            return false;
+        }
+
+        //패스워드 동일 여부 체크
+        if(password !== rePassword){
+            alert('패스워드가 동일하지 않습니다');
+            return false;
+        }
+
+        //학번 유효성 체크
+        if(!FirebaseChat.hakbunCheck(stuNum)){
+            alert('유효하지 않은 학번 입니다');
+            return false;
+        }
+
+        //전화번호 유효성 체크
+        if(!FirebaseChat.phoneCheck(phone)){
+            alert('유효하지 않은 전화번호 입니다');
+            return false;
+        }
+
+        return true;
+    }
+
+    FirebaseChat.emailCheck = function(mail){
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+            return true;
+        }
+        return false;
+    }
+
+    FirebaseChat.phoneCheck = function(phone){
+        var test1 = /^\d{3}-\d{3,4}-\d{4}$/;
+        var test2 = /^\d{10,11}/;
+        if(test1.test(phone)){
+            return true;
+        }
+        if(test2.test(phone)){
+            return true;
+        }
+        return false;
+    }
+
+    FirebaseChat.hakbunCheck = function(stuNum){
+        var test1 = /^\d{2}-\d{3}/;
+        if(test1.test(stuNum)){
+            return true;
+        }
+        return false;
+    };
+
+
+
+
+
+
+    $(document).ready(function(){
+        //Init Carousel
+        $('.collapsible').collapsible();
+        $('.sidenav').sidenav();
+        $('.chips-placeholder').chips({
+            placeholder: '학번 복수입력',
+            secondaryPlaceholder: '+Tag',
+            onChipAdd: resetHakbun,
+            onChipDelete: resetHakbun2
+        });
+    });
+    var startTimeObj, endTimeObj;
+    var chips, groupRadio, personRadio, chips2;
+    var start_time, end_time;
+    var startDate, endDate;
+    var startDateObj, endDateObj;
+    var start_time_num = 0, end_time_num = 0;
+    var group=0, gubun=1;
+    var gubunRadio1, gubunRadio2;
+    var groupMembers = [];
+    var submitButton;
+    var haksaPassword;
+
+    // init variables
+    window.onload = function () {
+        startTimeObj = document.getElementById('start_time');
+        startTimeObj.addEventListener('change', resetStartTime);
+        endTimeObj = document.getElementById('end_time');
+        endTimeObj.addEventListener('change', resetEndTime);
+        chips = document.getElementById('chips');
+        chips2 = document.getElementById('chips2');
+        groupRadio = document.getElementById('group');
+        groupRadio.addEventListener('change', toggleGroup);
+        personRadio = document.getElementById('person');
+        personRadio.addEventListener('change', togglePerson);
+        startDateObj = document.getElementById('start_date');
+        endDateObj = document.getElementById('end_date');
+        gubunRadio1 = document.getElementById('gubun1');
+        gubunRadio2 = document.getElementById('gubun2');
+        gubunRadio1.addEventListener('change', toggleGubun1);
+        gubunRadio2.addEventListener('change', toggleGubun2);
+        startDateObj.addEventListener('change', resetStartDate);
+        endDateObj.addEventListener('change', resetEndDate);
+        submitButton = document.getElementById('submit');
+        submitButton.addEventListener('click', submitData);
+        haksaPassword = document.getElementById('password2');
+        setDateTime();
+    };
+
+
+    function setDateTime(){
+        var d = new Date();
+        var year, month, date, hours, minutes;
+        year = d.getFullYear();
+        month = returnTwo(d.getMonth() + 1);
+        date = returnTwo(d.getDate());
+        hours = returnTwo(d.getHours());
+        minutes = returnTwo(d.getMinutes());
+        startDateObj.value = year + "-" + month + "-" + date;
+        endDateObj.value = startDateObj.value;
+        startTimeObj.value = hours + ":" + minutes;
+        endTimeObj.value = hours + ":" + minutes;
+        resetStartTime();
+        resetEndTime();
+    }
+
+    function returnTwo(num){
+        if(num.toString().length < 2){
+            return "0" + num.toString();
+        }
+        return num.toString();
+    }
+
+
+    function resetEndDate() {
+        endDate = endDateObj.value;
+        if(endDate < startDate) {
+            endDate = startDate;
+            endDateObj.value = endDate;
+        }
+    }
+    function resetStartDate(){
+        if(gubun===1){
+            endDateObj.value = startDateObj.value;
+        }
+        startDate = startDateObj.value;
+    }
+    function resetStartTime() {
+        var time = startTimeObj.value;
+        var start_time_min = parseInt(time.split(":")[1]);
+        var start_time_hour = parseInt(time.split(':')[0]);
+        if(start_time_hour >= 23){
+            start_time_hour = 22;
+            start_time_min = 30;
+        }else if(start_time_hour === 22 && start_time_min > 30) {
+            start_time_hour = 22;
+            start_time_min = 30;
+        }else {
+            start_time_min -= start_time_min % 10;
+        }
+        start_time = start_time_hour.toString();
+        if(start_time_hour.toString().length < 2){
+            start_time = "0" + start_time_hour.toString()
+        }
+        if(start_time_min.toString().length < 2){
+            start_time_min = "0" + start_time_min.toString()
+        }
+        start_time = start_time + ":" + start_time_min;
+        start_time_num = start_time_hour * 100 + start_time_min;
+        startTimeObj.value = start_time;
+        if(end_time_num < start_time_num){
+            end_time_num = start_time_num;
+            end_time = start_time;
+        }
+        endTimeObj.value = end_time;
+    }
+    function resetEndTime(){
+        var time = endTimeObj.value;
+        var end_time_hour = parseInt(time.split(":")[0]);
+        var end_time_min = parseInt(time.split(":")[1]);
+        if(end_time_hour >= 23){
+            end_time_hour = 22;
+            end_time_min = 30;
+        }else if(end_time_hour === 22 && end_time_min > 30){
+            end_time_hour = 22;
+            end_time_min = 30;
+        }else{
+            end_time_min -= end_time_min % 10;
+        }
+        end_time = end_time_hour.toString();
+        if(end_time_hour.toString().length < 2){
+            end_time = "0" + end_time_hour.toString()
+        }
+        if(end_time_min.toString().length < 2){
+            end_time_min = "0" + end_time_min.toString()
+        }
+        end_time = end_time + ":" + end_time_min;
+        end_time_num = end_time_hour * 100 + end_time_min;
+        if(startDate === endDate && end_time_num < start_time_num){
+            end_time = start_time;
+            end_time_num = start_time_num;
+        }
+        endTimeObj.value = end_time;
+    }
+    function toggleGroup(){
+        group = groupRadio.checked;
+        chips.style.display = 'block';
+    }
+    function togglePerson(){
+        group = groupRadio.checked;
+        console.log(group);
+        chips.style.display = 'none';
+        groupMembers = []
+    }
+    function toggleGubun1(){
+        gubun = 1;
+        endDateObj.disabled = true;
+        resetStartDate();
+    }
+    function toggleGubun2() {
+        gubun = 0;
+        endDateObj.disabled = false;
+    }
+
+    function resetHakbun() {
+        var instance = M.Chips.getInstance($('.chips'));
+        var dt = instance.chipsData;
+        if(dt.length !== 0){
+            var item = dt[dt.length-1].tag;
+            var re = /^\d{2}-\d{3}/;
+            groupMembers.push(dt[dt.length-1].tag);
+            if (!re.test(item)){
+                alert('잘못된 학번입니다.');
+                instance.deleteChip(dt.length-1);
+            }
+        }
+    }
+    function resetHakbun2() {
+        // let dt = M.Chips.getInstance($('.chips')).chipsData;
+        groupMembers.pop();
+    }
+    function submitData(){
+        var rne = document.getElementById('rne').checked ? 1 : 0;
+        group = group ? 1 : 0;
+        var start_hour, start_min = start_time_num % 100;
+        var end_hour, end_min = end_time_num % 100;
+        var sDate = startDateObj.value, eDate = endDateObj.value;
+        var place = document.getElementById('place').value;
+        place = place.split(" ");
+        place = place.join("_");
+        var reason = document.getElementById('reason').value;
+        reason = reason.split(" ");
+        reason = reason.join("_");
+        start_hour = (start_time_num - start_min) / 100;
+        end_hour = (end_time_num - end_min) / 100;
+        var haksaPasswordVal = haksaPassword.value;
+        var user = firebase.auth().currentUser;
+        var hakbun = user.displayName;
+
+
+        /////////////////////////정각 처리 ///////////////////////
+        if(typeof start_time_num === "string") {
+            start_hour = Math.floor(parseInt(start_time_num) / 10000);
+            start_min = 0;
+        }
+        if(typeof end_time_num === "string"){
+            end_hour = Math.floor(parseInt(end_time_num) / 10000);
+            end_min = 0;
+        }
+
+        if(place === ""){
+            alert('외출 장소를 입력해 주세요!');
+            document.getElementById('place').focus();
+        }else if(reason === ""){
+            alert('외출 사유를 입력해 주세요!');
+            document.getElementById('reason').focus();
+        }else if (haksaPasswordVal === ""){
+            alert("비밀번호를 입력해 주세요!");
+            haksaPasswordVal.focus();
+        }else{
+            var groupMem = groupMembers.join(';');
+            firebase.database().ref('Users/' + user.uid).once('value').then(function (snapshot) {
+                var phone = snapshot.val().phoneNum;
+                //console.log(phone);
+                //console.log(hakbun, haksaPasswordVal, gubun, group, rne, sDate, returnTwo(start_hour), returnTwo(start_min), eDate, returnTwo(end_hour), returnTwo(end_min), place, reason, '010-5617-7250', 'N', groupMem);
+                loadXML([hakbun, haksaPasswordVal, gubun, group, rne, sDate, returnTwo(start_hour), returnTwo(start_min), eDate, returnTwo(end_hour), returnTwo(end_min), place, reason, phone, 'N', groupMem])
+            })
+        }
+    }
+
+    function loadXML(arr) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200) {
+                //document.getElementById("demo").innerHTML = this.responseText;
+                alert("신청이 완료되었습니다.\n반영되기까지는 최대 1분이 소요됩니다.");
+                window.location.reload();
+            }
+        };
+        xhttp.open("POST", "https://ksacombined.cf/info", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("hakbun=" + arr[0] + "&password=" + arr[1] + "&gubun=" + arr[2] + "&group=" + arr[3] + "&rne=" + arr[4] + '&sDate=' + arr[5] + "&sHour=" + arr[6] + "&sMin=" + arr[7] + "&eDate=" + arr[8] + "&eHour=" + arr[9] + "&eMin=" + arr[10] + "&place=" + arr[11] + "&reason=" + arr[12] + "&phone=" + arr[13] + "&study=" + arr[14] + "&groupMem=" + arr[15]);
+    }
+    function showSignUP(){
+        document.getElementById('page_login').style.display = 'none';
+        document.getElementById('page_signup').style.display = 'block';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        //FirebaseChat 클래스 초기화
+        window.fbChat = new FirebaseChat();
+
+        if(navigator.serviceWorker){
+            navigator.serviceWorker.register('/firebase-messaging-sw.js')
+                .then(function(reg){console.log('서비스워커 등록성공 :', reg)})
+                .catch(function(error){console.log('서비스워커 등록실패 :', error)});
+        }
+    });
+</script>
+
+<script>
+
+</script>
+</body>
+</html>

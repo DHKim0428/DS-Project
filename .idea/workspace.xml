@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ca98f450-47f3-4ae4-ac19-d9a5500ee114" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/ConvertFile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/DS Project.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/Project BFP.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/[MS-PPTX].pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parsing.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test Oh yeah.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/[Content_Types].xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/_rels/.rels" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/docProps/app.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/docProps/core.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/docProps/thumbnail.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/_rels/presentation.xml.rels" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/media/image1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/media/image2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/media/image3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/media/image4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/presProps.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/presentation.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/_rels/slideLayout1.xml.rels" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/_rels/slideLayout10.xml.rels" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/_rels/slideLayout11.xml.rels" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/_rels/slideLayout2.xml.rels" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/_rels/slideLayout3.xml.rels" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/_rels/slideLayout4.xml.rels" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/_rels/slideLayout5.xml.rels" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/_rels/slideLayout6.xml.rels" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/_rels/slideLayout7.xml.rels" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/_rels/slideLayout8.xml.rels" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/_rels/slideLayout9.xml.rels" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/slideLayout1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/slideLayout10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/slideLayout11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/slideLayout2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/slideLayout3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/slideLayout4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/slideLayout5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/slideLayout6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/slideLayout7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/slideLayout8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/slideLayout9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slideMasters/_rels/slideMaster1.xml.rels" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slideMasters/slideMaster1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slides/_rels/slide1.xml.rels" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slides/_rels/slide2.xml.rels" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slides/_rels/slide3.xml.rels" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slides/slide1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slides/slide2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/slides/slide3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/tableStyles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/theme/theme1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ppt/viewProps.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_원본.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testfile.xml" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="794">
+              <caret line="686" column="46" selection-start-line="686" selection-start-column="46" selection-end-line="686" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="firebase-messaging-sw.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/firebase-messaging-sw.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/functions/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1539">
+              <caret line="81" column="3" selection-start-line="81" selection-start-column="3" selection-end-line="81" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/functions/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package-lock.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/functions/package-lock.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="3792" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="storage.rules" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/storage.rules">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="firebase.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firebase.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="database.rules.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database.rules.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name=".firebaserc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.firebaserc">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="mainfiest.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/mainfiest.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/functions/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/functions/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-14" />
+    <option name="y" value="-14" />
+    <option name="width" value="980" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="DS-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DS-Project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DS-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DS-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="functions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DS-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DS-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ca98f450-47f3-4ae4-ac19-d9a5500ee114" name="Default" comment="" />
+      <created>1528364047127</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1528364047127</updated>
+      <workItem from="1528364051087" duration="658000" />
+      <workItem from="1528368003332" duration="580000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1238000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1577" height="1016" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24983777" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13034">
+          <caret line="686" column="46" lean-forward="true" selection-start-line="686" selection-start-column="46" selection-end-line="686" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1539">
+          <caret line="81" column="3" lean-forward="true" selection-start-line="81" selection-start-column="3" selection-end-line="81" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage.rules">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firebase.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database.rules.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.firebaserc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/mainfiest.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="794">
+          <caret line="686" column="46" selection-start-line="686" selection-start-column="46" selection-end-line="686" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/firebase-messaging-sw.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="3792" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1539">
+          <caret line="81" column="3" selection-start-line="81" selection-start-column="3" selection-end-line="81" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
