@@ -187,7 +187,7 @@
       </div>
     </a>
 
-    <a href="#!" class="collection-item waves-effect waves-black">
+    <a href="#!" class="collection-item waves-effect waves-black" id="gnBtn">
       <div class="row valign-wrapper" style="height: 100px">
         <div class="col s2 m2 l2">
           <img src="images/gaonnuri.jpg" alt="KSA EATS YOU" class="circle" style="height:70px">
@@ -393,6 +393,20 @@
   </li>
 </script>
 
+<script type="text/template" id="chat_bot_gn">
+  <li id="chat_<%=chatNumber_bot_gn %>">
+    <div class="row" style="margin-top: 0px; margin-bottom: 0px;">
+      <div class="col s12">
+        <div class="card white" style="margin-top:2px; margin-bottom:0px;">
+          <div class="card-content" style="padding-top: 10px; padding-bottom: 10px;">
+            <p><%=message %></p>
+            <a href="<%=link %>"><%=link_msg %><</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</script>
 
 
 <!--JavaScript at end of body for optimized loading-->
@@ -446,11 +460,11 @@
         this.ulMessageList = document.getElementById('ulMessageList');
         this.Chatcontainer = document.getElementById('messageContainer');
         this.chatInput = document.getElementById('chatinput');
+        this.gnBtn = document.getElementById('gnBtn');
         this.INDEXDB_DB_NAME = "USER";
         this.INDEXDB_VERSION = 1;
         this.INDEXDB_STORE = "Users";
         this.chatNum = 0;
-        this.setCloudMessaging();
     };
 
     FirebaseChat.prototype.initEvent = function(){
@@ -464,6 +478,7 @@
         this.mentoringBtn.addEventListener('click', this.showWeb.bind(this, 'https://mentoringtime-f96cc.firebaseapp.com/'));
         this.messageBtn.addEventListener('click', this.sendChat.bind(this));
         this.chatInput.addEventListener('keydown', this.onEnterKey.bind(this));
+        this.gnBtn.addEventListener('click', this.viewGN.bind(this, 1));
     };
 
     FirebaseChat.prototype.setCloudMessaging = function(){
@@ -679,12 +694,13 @@
         this.logoutBtn1.style.display = 'block';
         this.logoutBtn2.style.display = 'block';
         this.checkAndSaveUser(user);
+        this.setCloudMessaging();
         this.viewGN();
     };
 
-    FirebaseChat.prototype.viewGN = function(){
+    FirebaseChat.prototype.viewGN = function(param){
         let paramData = FirebaseChat.getParam('gn');
-        if(paramData && paramData.length > 0){
+        if(param || (paramData && paramData.length > 0)){
             this.appSelectPage.style.display = 'none';
             this.chatPage.style.display = 'block';
             this.ulMessageList.innerHTML = '';
@@ -693,11 +709,14 @@
                     let title = childSnapShot.val().title;
                     let url = childSnapShot.val().url;
                     let messageHtml = '';
-                    let messageTemplateBot = document.getElementById('chat_bot_text').innerHTML;
-                    messageHtml = _.template(messageTemplateBot)({
-                        chatNumber_bot_text: fbChat.chatNum,
-                        message: "새 글이 올라왔어요!\n" + title + "\n" + url
+                    let messageTemplateBotLink = document.getElementById('chat_bot_gn').innerHTML;
+                    messageHtml = _.template(messageTemplateBotLink)({
+                        chatNumber_bot_gn: fbChat.chatNum,
+                        message: "새 글이 올라왔어요! " + title,
+                        link: url,
+                        link_msg: url
                     });
+                    console.log(url);
                     fbChat.chatNum += 1;
                     this.ulMessageList.innerHTML = this.ulMessageList.innerHTML + messageHtml;
                     this.Chatcontainer.scrollTop = this.Chatcontainer.scrollHeight;
@@ -1161,11 +1180,17 @@
         //FirebaseChat 클래스 초기화
         window.fbChat = new FirebaseChat();
 
-        if(navigator.serviceWorker){
-            navigator.serviceWorker.register('/firebase-messaging-sw.js')
-                .then(function(reg){console.log('서비스워커 등록성공 :', reg)})
-                .catch(function(error){console.log('서비스워커 등록실패 :', error)});
-        }
+        navigator.serviceWorker.getRegistrations().then(function(registrations){
+            for(let registration of registrations){
+                registration.unregister();
+            }
+            if(navigator.serviceWorker){
+                navigator.serviceWorker.register('/firebase-messaging-sw.js')
+                    .then(function(reg){console.log('서비스워커 등록성공 :', reg)})
+                    .catch(function(error){console.log('서비스워커 등록실패 :', error)});
+            }
+        });
+
     });
 </script>
 

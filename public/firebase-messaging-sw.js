@@ -6,7 +6,7 @@ firebase.initializeApp({
 });
 
 const messaging = firebase.messaging();
-self.addEventListener('push', function(event) {
+/*self.addEventListener('push', function(event) {
     const payload = event.data.json();
     const title = payload.notification.title;
     const options = {
@@ -22,4 +22,15 @@ self.addEventListener('notificationclick', function(event) {
     event.waitUntil(
         clients.openWindow(event.notification.data)
     );
+});*/
+messaging.setBackgroundMessageHandler(function(payload){
+    console.log('[firebase-messaging-sw.js] Received background message ', payload);
+    // Customize notification here
+    let notificationTitle = payload.notification.title;
+    let notificationOptions = {
+        body: payload.notification.body,
+        icon: payload.notification.icon,
+        data: payload.notification.click_action
+    };
+    return self.registration.showNotification(notificationTitle, notificationOptions);
 });
