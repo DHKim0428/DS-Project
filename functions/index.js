@@ -12,7 +12,7 @@ admin.initializeApp(functions.config().firebase);
 
 exports.sendNotification = functions.database.ref('GN/{timestamp}').onCreate((snap, context) => {
     console.log('event data: ', snap);
-    console.log('event.data.val()' + snap.val().stringify());
+    console.log('event.data.val()' + snap.val().title);
 
     const dataVal = snap.val();
     if(!dataVal){
@@ -22,47 +22,46 @@ exports.sendNotification = functions.database.ref('GN/{timestamp}').onCreate((sn
     const url = dataVal.url;
     const promiseUserList = admin.database().ref('Users/').once('value');
     const arrUserList = [];
-    promiseUserList.then(result => {
-        if(result.hasChildren()){
-            result.forEach(snapshot => {
-                arrUserList.push(snapshot.uid);
-            })
+    return Promise.all([promiseUserList]).then(results => {
+        console.log(results);
+        if(results[0].hasChildren()){
+            results[0].forEach(snapshot => {
+                console.log(snapshot.key);
+                arrUserList.push(snapshot.key);
+            });
+            console.log(arrUserList);
         }else{
             console.log('UserList is null');
         }
-    }).catch(error => {
-        console.log(error);
-    });
 
-    for (let i=0; i<arrUserList.length; i++){
-        console.log('FcmId/${arrUserList[i]}');
-        admin.database.ref('FcmId/${arrUserList[i]}').once('value', fcmSnapshot=>{
-            console.log('FCM Token:', fcmSnapshot.val());
-            const token = fcmSnapshot.val();
-            if(token){
-                const payload = {
-                    notification:{
-                        title: "새 글이 올라왔어요!",
-                        body: title,
-                        click_action: "https://ksacombined.cf/?gn=1",
-                        icon: ""
-                    }
-                };
-                admin.messaging().sendToDevice(token, payload).then(response=>{
-                    response.results.forEach((result, index)=>{
-                        const error = result.error;
-                        if(error){
-                            console.log('FCM 실패 :', error.code);
-                        }else{
-                            console.log('FCM 성공');
+        for (let i=0; i<arrUserList.length; i++) {
+            console.log(`FcmId/${arrUserList[i]}`);
+            admin.database().ref(`FcmId/${arrUserList[i]}`).once('value', fcmSnapshot => {
+                console.log('FCM Token:', fcmSnapshot.val());
+                const token = fcmSnapshot.val();
+                if (token) {
+                    const payload = {
+                        notification: {
+                            title: "새 글이 올라왔어요!",
+                            body: title,
+                            click_action: "https://ksacombined.cf/?gn=1",
+                            icon: ""
                         }
+                    };
+                    admin.messaging().sendToDevice(token, payload).then(response => {
+                        response.results.forEach((result, index) => {
+                            const error = result.error;
+                            if (error) {
+                                console.log('FCM 실패 :', error.code);
+                            } else {
+                                console.log('FCM 성공');
+                            }
+                        });
                     });
-                }).catch(error =>{
-                    console.log(error);
-                })
-            }
-        })
-    }
+                }
+            });
+        }
+    });
 });
 
 exports.sendHaksa = functions.https.onRequest((req, res)=>{
