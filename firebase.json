@@ -11,6 +11,18 @@
     ],
     "rewrites": [
       {
+        "source": "/info",
+        "function": "sendHaksa"
+      },
+      {
+        "source": "/jena",
+        "function": "sendJena"
+      },
+      {
+        "source": "/gn",
+        "function": "updateGN"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }

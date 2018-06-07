@@ -2,61 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca98f450-47f3-4ae4-ac19-d9a5500ee114" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/ConvertFile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docs/DS Project.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docs/Project BFP.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docs/[MS-PPTX].pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parsing.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test Oh yeah.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/[Content_Types].xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/_rels/.rels" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/docProps/app.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/docProps/core.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/docProps/thumbnail.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/_rels/presentation.xml.rels" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/media/image1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/media/image2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/media/image3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/media/image4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/presProps.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/presentation.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/_rels/slideLayout1.xml.rels" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/_rels/slideLayout10.xml.rels" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/_rels/slideLayout11.xml.rels" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/_rels/slideLayout2.xml.rels" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/_rels/slideLayout3.xml.rels" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/_rels/slideLayout4.xml.rels" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/_rels/slideLayout5.xml.rels" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/_rels/slideLayout6.xml.rels" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/_rels/slideLayout7.xml.rels" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/_rels/slideLayout8.xml.rels" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/_rels/slideLayout9.xml.rels" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/slideLayout1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/slideLayout10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/slideLayout11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/slideLayout2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/slideLayout3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/slideLayout4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/slideLayout5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/slideLayout6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/slideLayout7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/slideLayout8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slideLayouts/slideLayout9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slideMasters/_rels/slideMaster1.xml.rels" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slideMasters/slideMaster1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slides/_rels/slide1.xml.rels" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slides/_rels/slide2.xml.rels" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slides/_rels/slide3.xml.rels" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slides/slide1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slides/slide2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/slides/slide3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/tableStyles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/theme/theme1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ppt/viewProps.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_원본.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testfile.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebase.json" beforeDir="false" afterPath="$PROJECT_DIR$/firebase.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -84,11 +31,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1539">
-              <caret line="81" column="3" selection-start-line="81" selection-start-column="3" selection-end-line="81" selection-end-column="3" />
+            <state relative-caret-position="376">
+              <caret line="94" column="33" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -97,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/functions/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -116,14 +63,22 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="firebase.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="firebase.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/firebase.json">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="database.rules.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database.rules.json">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name=".firebaserc" pinned="false" current-in-tab="false">
@@ -140,6 +95,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/functions/index.js" />
+        <option value="$PROJECT_DIR$/firebase.json" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -221,12 +184,12 @@
       <option name="presentableId" value="Default" />
       <updated>1528364047127</updated>
       <workItem from="1528364051087" duration="658000" />
-      <workItem from="1528368003332" duration="580000" />
+      <workItem from="1528368003332" duration="1178000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1238000" />
+    <option name="totallyTimeSpent" value="1836000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1577" height="1016" extended-state="6" />
@@ -275,12 +238,6 @@
     <entry file="file://$PROJECT_DIR$/storage.rules">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/firebase.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database.rules.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/.firebaserc">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -307,14 +264,28 @@
     <entry file="file://$PROJECT_DIR$/functions/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1539">
-          <caret line="81" column="3" selection-start-line="81" selection-start-column="3" selection-end-line="81" selection-end-column="3" />
+        <state relative-caret-position="376">
+          <caret line="94" column="33" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database.rules.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firebase.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
         </state>
       </provider>
     </entry>
