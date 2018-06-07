@@ -5,6 +5,14 @@
   <meta name="theme-color" content="#263238">
 
   <style>
+    @font-face {
+      font-family:'KoreanYNSJG1R';
+      src: url('/fonts/a옛날사진관1.ttf');
+    }
+
+    body{
+      font-family: 'KoreanYNSJG1R';
+    }
     .grad1{
       background: linear-gradient(to bottom, #08112a, #1a415c, #41596a) ;
       background-repeat: no-repeat;
@@ -84,12 +92,12 @@
 <div class="navbar-fixed">
   <nav class="blue-grey darken-4">
     <div class="nav-wrapper" >
-      <a href="#!" class="brand-logo">Combined</a>
+      <a href="#" onclick="location.replace('https://ksacombined.cf')" class="brand-logo">Combined</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html">Home</a></li>
-        <li><a href="badges.html">How to Use</a></li>
-        <li><a href="collapsible.html">About us</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">How to Use</a></li>
+        <li><a href="#">About us</a></li>
         <li><a href="#" id="logoutBtn1" style="display: none;">Log Out</a></li>
       </ul>
     </div>
@@ -97,9 +105,9 @@
 </div>
 
 <ul class="sidenav" id="mobile-demo">
-  <li><a href="sass.html">Home</a></li>
-  <li><a href="badges.html">How to Use</a></li>
-  <li><a href="collapsible.html">About us</a></li>
+  <li><a href="#">Home</a></li>
+  <li><a href="#">How to Use</a></li>
+  <li><a href="#">About us</a></li>
   <li><a href="#" id="logoutBtn2" style="display: none;">Log Out</a></li>
 </ul>
 
@@ -181,7 +189,7 @@
     <a href="#!" class="collection-item waves-effect waves-black" id="jenaBtn">
       <div class="row valign-wrapper" style="height: 100px">
         <div class="col s2 m2 l2">
-          <img src="images/크사이다.png" alt="크사이다" class="circle" style="height:70px">
+          <img src="images/크사이다.JPG" alt="크사이다" class="circle" style="height:70px">
         </div>
         <div class="col s9 m9 l9 center white-text" style="font-size:20px">크사이다</div>
       </div>
@@ -190,27 +198,36 @@
     <a href="#!" class="collection-item waves-effect waves-black" id="gnBtn">
       <div class="row valign-wrapper" style="height: 100px">
         <div class="col s2 m2 l2">
-          <img src="images/gaonnuri.jpg" alt="KSA EATS YOU" class="circle" style="height:70px">
+          <img src="images/가온누리알림.JPG" alt="KSA EATS YOU" class="circle" style="height:70px">
         </div>
         <div class="col s9 m9 l9 center white-text" style="font-size:20px">가온누리 알림</div>
-      </div>
-    </a>
-
-    <a href="#!" class="collection-item waves-effect waves-black" id="mentoringBtn">
-      <div class="row valign-wrapper" style="height: 100px">
-        <div class="col s2 m2 l2">
-          <img src="images/mentoring.jpg" alt="Mentoring" class="circle" style="height:70px">
-        </div>
-        <div class="col s9 m9 l9 center white-text" style="font-size:20px">멘토링 수고링</div>
       </div>
     </a>
 
     <a href="#!" class="collection-item waves-effect waves-black" id="AFGOBtn">
       <div class="row valign-wrapper" style="height: 100px">
         <div class="col s2 m2 l2">
-          <img src="images/외출신청.png" alt="외출 신청" class="circle" style="height:70px">
+          <img src="images/외출신청.JPG" alt="외출 신청" class="circle" style="height:70px">
         </div>
         <div class="col s9 m9 l9 center white-text" style="font-size:20px">외출 신청</div>
+      </div>
+    </a>
+
+    <a href="#!" class="collection-item waves-effect waves-black" id="mentoringBtn">
+      <div class="row valign-wrapper" style="height: 100px">
+        <div class="col s2 m2 l2">
+          <img src="images/멘토링수고링.JPG" alt="Mentoring" class="circle" style="height:70px">
+        </div>
+        <div class="col s9 m9 l9 center white-text" style="font-size:20px">멘토링 수고링</div>
+      </div>
+    </a>
+
+    <a href="#!" class="collection-item waves-effect waves-black" id="BYTBtn">
+      <div class="row valign-wrapper" style="height: 100px">
+        <div class="col s2 m2 l2">
+          <img src="images/비요뜨.JPG" alt="비요뜨" class="circle" style="height:70px">
+        </div>
+        <div class="col s9 m9 l9 center white-text" style="font-size:20px">비요뜨</div>
       </div>
     </a>
   </div>
@@ -461,6 +478,7 @@
         this.Chatcontainer = document.getElementById('messageContainer');
         this.chatInput = document.getElementById('chatinput');
         this.gnBtn = document.getElementById('gnBtn');
+        this.BYTBtn = document.getElementById('BYTBtn');
         this.INDEXDB_DB_NAME = "USER";
         this.INDEXDB_VERSION = 1;
         this.INDEXDB_STORE = "Users";
@@ -479,6 +497,7 @@
         this.messageBtn.addEventListener('click', this.sendChat.bind(this));
         this.chatInput.addEventListener('keydown', this.onEnterKey.bind(this));
         this.gnBtn.addEventListener('click', this.viewGN.bind(this, 1));
+        this.BYTBtn.addEventListener('click', this.showWeb.bind(this, "https://www.google.com")); // 여기에 주소 넣기
     };
 
     FirebaseChat.prototype.setCloudMessaging = function(){
@@ -798,7 +817,8 @@
         this.signupPage.style.display = 'none';
         this.appSelectPage.style.display = 'none';
         this.AFGOPage.style.display = 'none';
-
+        this.chatPage.style.display = 'none';
+        this.iframePage.style.display = 'none';
     };
 
     FirebaseChat.prototype.createEmailUser = function(){
